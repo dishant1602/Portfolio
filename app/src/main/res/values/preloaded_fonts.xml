@@ -4,7 +4,10 @@
         <item>@font/baloo_da</item>
         <item>@font/exo_2_extrabold</item>
         <item>@font/exo_2_medium</item>
+        <item>@font/inter</item>
+        <item>@font/inter_semibold</item>
         <item>@font/lato</item>
         <item>@font/montserrat_extrabold</item>
+        <item>@font/nunito_bold</item>
     </array>
 </resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/skills"
+        android:title="Skills"
+        android:icon="@drawable/menuskills"/>
+
+    <item
+        android:id="@+id/projects"
+        android:title="Projects"
+        android:icon="@drawable/menuprojects"/>
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/menuhome"/>
+
+    <item
+        android:id="@+id/education"
+        android:title="Education"
+        android:icon="@drawable/menueducation"/>
+
+    <item
+        android:id="@+id/internships"
+        android:title="Internships"
+        android:icon="@drawable/menuinternship"/>
+</menu>

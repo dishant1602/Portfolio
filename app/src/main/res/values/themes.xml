@@ -6,4 +6,28 @@
     </style>
 
     <style name="Theme.Portfolio" parent="Base.Theme.Portfolio" />
+
+    <style name="SCREEN">
+        <item name="android:background">@drawable/mainbackground_light</item>
+    </style>
+
+    <style name="TEXT">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TINT">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <style name="MailMeImg">
+        <item name="android:src">@drawable/mailmeimg_light</item>
+    </style>
+
+    <style name="CallMeImg">
+        <item name="android:src">@drawable/callmeimg_light</item>
+    </style>
+
+    <style name="PingMeImg">
+        <item name="android:src">@drawable/pingmeimg_light</item>
+    </style>
 </resources>

@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Portfolio</string>
+    <string name="about_me">Motivated and enthusiastic leaner always thriving to learn and develop exciting things. Sharpened and delivered skills in entire learning and internships during Degree Level Education</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

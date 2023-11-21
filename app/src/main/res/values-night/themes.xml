@@ -4,4 +4,28 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+    <style name="SCREEN">
+        <item name="android:background">@drawable/mainbackground_dark</item>
+    </style>
+
+    <style name="TEXT">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TINT">
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="MailMeImg">
+        <item name="android:src">@drawable/mailmeimg_dark</item>
+    </style>
+
+    <style name="CallMeImg">
+        <item name="android:src">@drawable/callmeimg_dark</item>
+    </style>
+
+    <style name="PingMeImg">
+        <item name="android:src">@drawable/pingmeimg_dark</item>
+    </style>
 </resources>
