@@ -5,7 +5,6 @@ import android.animation.ObjectAnimator
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -73,14 +72,14 @@ class HomeFragment : Fragment() {
         sequence.start()
 
         //Functionality
-        callIcon.setOnClickListener {view ->
+        callIcon.setOnClickListener {_ ->
             val phoneNumber = "+919727114477"
             val dialIntent = Intent(Intent.ACTION_DIAL)
             dialIntent.data = Uri.parse("tel:$phoneNumber")
             startActivity(dialIntent)
         }
 
-        mailIcon.setOnClickListener { view ->
+        mailIcon.setOnClickListener { _ ->
             val recipientEmail = "dishantsakhida@gmail.com"
             val subject = "Your Subject"
             val body = "Your email body content"
@@ -91,7 +90,7 @@ class HomeFragment : Fragment() {
             startActivity(emailIntent)
         }
 
-        pingIcon.setOnClickListener { view ->
+        pingIcon.setOnClickListener { _ ->
             val linkedInProfileUrl = "https://www.linkedin.com/in/dishant-sakhida-4206681b4"
             val linkedInIntent = Intent(Intent.ACTION_VIEW)
             linkedInIntent.data = Uri.parse(linkedInProfileUrl)

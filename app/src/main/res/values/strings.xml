@@ -3,4 +3,23 @@
     <string name="about_me">Motivated and enthusiastic leaner always thriving to learn and develop exciting things. Sharpened and delivered skills in entire learning and internships during Degree Level Education</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skills">Skills</string>
+    <string name="projects">Projects</string>
+    <string name="home">Home</string>
+    <string name="education">Education</string>
+    <string name="internships">Internships</string>
+    <string name="imgDescription">No Description</string>
+    <string name="myName">Dishant</string>
+    <string name="bulletPoint1">Motivated Learner</string>
+    <string name="bulletPoint2">Enthusiastic developer</string>
+    <string name="bulletPoint3">Loves Challenges</string>
+    <string name="bulletPoint4">Sharpened skills</string>
+    <string name="bulletPoint5">Internship Experience</string>
+    <string name="contact_info">CONTACT INFO</string>
+    <string name="call_me">CALL ME</string>
+    <string name="mobile_number">+91en dash9727en dash114477</string>
+    <string name="mail_me">MAIL ME</string>
+    <string name="email_id">dishantsakhida@gmail.com</string>
+    <string name="ping_me">PING ME</string>
+    <string name="linkedin_id">linkedin.com/dishant-sakhida</string>
 </resources>

@@ -35,4 +35,8 @@
             android:resource="@array/preloaded_fonts" />
     </application>
 
+    <queries>
+        <package android:name="com.linkedin.android" />
+    </queries>
+
 </manifest>

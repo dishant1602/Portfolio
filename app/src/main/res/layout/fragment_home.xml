@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/mainbackground_light"
     tools:context=".HomeFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -19,14 +18,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="10dp"
-            tools:layout_editor_absoluteY="10dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/themetoggle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 app:lottie_autoPlay="false"
                 app:lottie_loop="false"
                 app:lottie_rawRes="@raw/lightdark" />
@@ -42,7 +42,8 @@
                     android:layout_height="250dp"
                     android:layout_marginStart="10dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/aboutmeimg" />
+                    android:src="@drawable/aboutmeimg"
+                    android:contentDescription="@string/imgDescription" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -52,13 +53,13 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/TEXT"
                         android:id="@+id/mainNameplate"
+                        style="@style/TEXT"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/nunito_bold"
-                        android:text="Dishant"
+                        android:text="@string/myName"
                         android:textSize="34sp" />
 
                     <LinearLayout
@@ -73,7 +74,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0"
-                            android:src="@drawable/bullets" />
+                            android:src="@drawable/bullets"
+                            android:contentDescription="@string/imgDescription" />
 
                         <TextView
                             style="@style/TEXT"
@@ -82,7 +84,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/inter"
-                            android:text="Motivated LEARNER"
+                            android:text="@string/bulletPoint1"
                             android:textAllCaps="true" />
                     </LinearLayout>
 
@@ -98,7 +100,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0"
-                            android:src="@drawable/bullets" />
+                            android:src="@drawable/bullets"
+                            android:contentDescription="@string/imgDescription" />
 
                         <TextView
                             style="@style/TEXT"
@@ -107,7 +110,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/inter"
-                            android:text="Enthusiastic developer"
+                            android:text="@string/bulletPoint2"
                             android:textAllCaps="true" />
                     </LinearLayout>
 
@@ -123,7 +126,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0"
-                            android:src="@drawable/bullets" />
+                            android:src="@drawable/bullets"
+                            android:contentDescription="@string/imgDescription" />
 
                         <TextView
                             style="@style/TEXT"
@@ -132,7 +136,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/inter"
-                            android:text="Loves Challenges"
+                            android:text="@string/bulletPoint3"
                             android:textAllCaps="true" />
                     </LinearLayout>
 
@@ -148,7 +152,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0"
-                            android:src="@drawable/bullets" />
+                            android:src="@drawable/bullets"
+                            android:contentDescription="@string/imgDescription" />
 
                         <TextView
                             style="@style/TEXT"
@@ -157,7 +162,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/inter"
-                            android:text="Sharpened skills"
+                            android:text="@string/bulletPoint4"
                             android:textAllCaps="true" />
                     </LinearLayout>
 
@@ -172,7 +177,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0"
-                            android:src="@drawable/bullets" />
+                            android:src="@drawable/bullets"
+                            android:contentDescription="@string/imgDescription" />
 
                         <TextView
                             style="@style/TEXT"
@@ -181,7 +187,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_weight="1"
                             android:fontFamily="@font/inter"
-                            android:text="Internship Experience"
+                            android:text="@string/bulletPoint5"
                             android:textAllCaps="true" />
                     </LinearLayout>
 
@@ -202,7 +208,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:fontFamily="@font/nunito_bold"
-                    android:text="CONTACT INFO"
+                    android:text="@string/contact_info"
                     android:textSize="16sp" />
 
                 <ImageView
@@ -211,8 +217,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:layout_marginLeft="25dp"
-                    android:src="@drawable/bottomline" />
+                    android:layout_marginStart="25dp"
+                    android:src="@drawable/bottomline"
+                    android:contentDescription="@string/imgDescription" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/callmeCard"
@@ -235,7 +242,8 @@
                             android:layout_width="50dp"
                             android:layout_height="60dp"
                             android:layout_marginStart="10dp"
-                            android:layout_weight="0.5" />
+                            android:layout_weight="0.5"
+                            android:contentDescription="@string/imgDescription" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -250,14 +258,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/inter_semibold"
-                                android:text="CALL ME"
+                                android:text="@string/call_me"
                                 android:textSize="16sp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/inter"
-                                android:text="+91-9727-114477"
+                                android:text="@string/mobile_number"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -267,7 +275,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
-                            android:src="@drawable/callicon" />
+                            android:src="@drawable/callicon"
+                            android:contentDescription="@string/imgDescription" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -293,7 +302,8 @@
                             android:layout_width="50dp"
                             android:layout_height="60dp"
                             android:layout_marginStart="10dp"
-                            android:layout_weight="0.5" />
+                            android:layout_weight="0.5"
+                            android:contentDescription="@string/imgDescription" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -308,14 +318,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/inter_semibold"
-                                android:text="MAIL ME"
+                                android:text="@string/mail_me"
                                 android:textSize="16sp" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/inter"
-                                android:text="dishantsakhida@gmail.com"
+                                android:text="@string/email_id"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -325,7 +335,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
-                            android:src="@drawable/mailicon" />
+                            android:src="@drawable/mailicon"
+                            android:contentDescription="@string/imgDescription" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -353,7 +364,8 @@
                             android:layout_width="50dp"
                             android:layout_height="60dp"
                             android:layout_marginStart="10dp"
-                            android:layout_weight="0.5" />
+                            android:layout_weight="0.5"
+                            android:contentDescription="@string/imgDescription" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -369,7 +381,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/inter_semibold"
-                                android:text="PING ME"
+                                android:text="@string/ping_me"
                                 android:textSize="16sp" />
 
                             <TextView
@@ -377,7 +389,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/inter"
-                                android:text="linkedin.com/dishant-sakhida"
+                                android:text="@string/linkedin_id"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -387,7 +399,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
-                            android:src="@drawable/pingicon" />
+                            android:src="@drawable/pingicon"
+                            android:contentDescription="@string/imgDescription" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

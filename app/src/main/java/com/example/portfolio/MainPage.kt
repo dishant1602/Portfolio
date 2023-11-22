@@ -28,9 +28,9 @@ class MainPage : AppCompatActivity() {
                 newIndex: Int,
                 newTab: AnimatedBottomBar.Tab
             ) {
-                var fm : FragmentManager = supportFragmentManager
-                var ft: FragmentTransaction = fm.beginTransaction()
-                var fragmentCurrent: Fragment? = fm.findFragmentById(R.id.container)
+                val fm : FragmentManager = supportFragmentManager
+                val ft: FragmentTransaction = fm.beginTransaction()
+                val fragmentCurrent: Fragment? = fm.findFragmentById(R.id.container)
                 if(fragmentCurrent!=null){
                     ft.remove(fragmentCurrent)
                 }
