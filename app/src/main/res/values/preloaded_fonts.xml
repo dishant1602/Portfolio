@@ -8,6 +8,7 @@
         <item>@font/inter_semibold</item>
         <item>@font/lato</item>
         <item>@font/montserrat_extrabold</item>
+        <item>@font/nunito</item>
         <item>@font/nunito_bold</item>
     </array>
 </resources>
