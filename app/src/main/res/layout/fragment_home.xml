@@ -62,6 +62,7 @@
                         android:textSize="34sp" />
 
                     <LinearLayout
+                        android:id="@+id/ll1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="5dp"
@@ -86,6 +87,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/ll2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="5dp"
@@ -110,6 +112,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/ll3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="5dp"
@@ -134,6 +137,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/ll4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="5dp"
@@ -158,6 +162,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/ll5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
@@ -257,6 +262,7 @@
                         </LinearLayout>
 
                         <ImageView
+                            android:id="@+id/callIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -314,6 +320,7 @@
                         </LinearLayout>
 
                         <ImageView
+                            android:id="@+id/mailIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -375,7 +382,7 @@
                         </LinearLayout>
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/pingIcon"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
