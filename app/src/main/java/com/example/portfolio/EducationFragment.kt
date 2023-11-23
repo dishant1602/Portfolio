@@ -18,7 +18,12 @@ class EducationFragment : Fragment() {
     private val images = listOf(
         R.drawable.semester1,
         R.drawable.semester2,
-        R.drawable.semester3
+        R.drawable.semester3,
+        R.drawable.semester4,
+        R.drawable.semester5,
+        R.drawable.semester6,
+        R.drawable.semester7,
+        R.drawable.semester8
         // Add more image resources as needed
     )
 
@@ -38,13 +43,45 @@ class EducationFragment : Fragment() {
         val clgChildCard: CardView = view.findViewById(R.id.clgChildCard)
         val clgGraphImg: CardView = view.findViewById(R.id.clgGraphImg)
 
-        //Animation for CardViews
-        val sequence = AnimatorSet()
+        clgParentCard.visibility = View.INVISIBLE
+        twelveParentCard.visibility = View.INVISIBLE
+        tenParentCard.visibility = View.INVISIBLE
+
         val clgParentCardslide = ObjectAnimator.ofFloat(clgParentCard, "translationX", -1500f, 0f)
-        val twelveParentCardslide = ObjectAnimator.ofFloat(twelveParentCard, "translationX", -1500f, 0f)
-        val tenParentCardslide = ObjectAnimator.ofFloat(tenParentCard, "translationX", -1500f, 0f)
-        sequence.playSequentially(clgParentCardslide, twelveParentCardslide, tenParentCardslide)
-        sequence.start()
+        clgParentCardslide.addListener(object: AnimatorListenerAdapter(){
+            override fun onAnimationStart(animation: Animator) {
+                clgParentCard.visibility = View.VISIBLE
+            }
+
+            override fun onAnimationEnd(animation: Animator) {
+                val twelveParentCardslide = ObjectAnimator.ofFloat(twelveParentCard, "translationX", -1500f, 0f)
+                twelveParentCardslide.addListener(object: AnimatorListenerAdapter(){
+                    override fun onAnimationStart(animation: Animator) {
+                        twelveParentCard.visibility = View.VISIBLE
+                    }
+
+                    override fun onAnimationEnd(animation: Animator) {
+                        val tenParentCardslide = ObjectAnimator.ofFloat(tenParentCard, "translationX", -1500f, 0f)
+                        tenParentCardslide.addListener(object: AnimatorListenerAdapter(){
+                            override fun onAnimationStart(animation: Animator) {
+                                tenParentCard.visibility = View.VISIBLE
+                            }
+                        })
+                        tenParentCardslide.start()
+                    }
+                })
+                twelveParentCardslide.start()
+            }
+        })
+        clgParentCardslide.start()
+//
+//        //Animation for CardViews
+//        val sequence = AnimatorSet()
+//        val clgParentCardslide = ObjectAnimator.ofFloat(clgParentCard, "translationX", -1500f, 0f)
+//        val twelveParentCardslide = ObjectAnimator.ofFloat(twelveParentCard, "translationX", -1500f, 0f)
+//        val tenParentCardslide = ObjectAnimator.ofFloat(tenParentCard, "translationX", -1500f, 0f)
+//        sequence.playSequentially(clgParentCardslide, twelveParentCardslide, tenParentCardslide)
+//        sequence.start()
 
 
         clgParentIcon.setOnClickListener{ _->
