@@ -15,6 +15,13 @@ import androidx.cardview.widget.CardView
 
 class EducationFragment : Fragment() {
 
+    private val images = listOf(
+        R.drawable.semester1,
+        R.drawable.semester2,
+        R.drawable.semester3
+        // Add more image resources as needed
+    )
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,6 +35,8 @@ class EducationFragment : Fragment() {
         val twelveParentIcon: ImageView = view.findViewById(R.id.twelveParentIcon)
         val tenParentCard: CardView = view.findViewById(R.id.tenParentCard)
         val tenParentIcon: ImageView = view.findViewById(R.id.tenParentIcon)
+        val clgChildCard: CardView = view.findViewById(R.id.clgChildCard)
+        val clgGraphImg: CardView = view.findViewById(R.id.clgGraphImg)
 
         //Animation for CardViews
         val sequence = AnimatorSet()
@@ -43,10 +52,26 @@ class EducationFragment : Fragment() {
             clgParentCardAnimator.addListener(object: AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
                     clgParentCard.visibility = View.GONE
+                    val clgChildCardAnimator = ObjectAnimator.ofFloat(clgChildCard,"alpha",0f,1f)
+                    clgChildCardAnimator.addListener(object: AnimatorListenerAdapter()
+                    {
+                        override fun onAnimationStart(animation: Animator) {
+                            clgChildCard.visibility = View.VISIBLE
+                        }
+                    })
+                    clgChildCardAnimator.duration=1000
+                    clgChildCardAnimator.start()
+
                 }
             })
             clgParentCardAnimator.duration = 1000
             clgParentCardAnimator.start()
+        }
+
+        clgGraphImg.setOnClickListener{ _->
+            val customDialog = CustomDialog(this, images)
+            customDialog.show()
+
         }
 
         return view
