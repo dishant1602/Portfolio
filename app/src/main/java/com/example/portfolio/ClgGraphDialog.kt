@@ -7,25 +7,23 @@ import android.text.Html
 import android.util.Log
 import android.view.View
 import android.view.Window
-import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources.getDrawable
 import androidx.cardview.widget.CardView
 import androidx.viewpager.widget.ViewPager
-class CustomDialog(private val fragment: EducationFragment, private val images: List<Int>) : Dialog(fragment.requireContext()) {
+class ClgGraphDialog(private val fragment: EducationFragment, private val images: List<Int>) : Dialog(fragment.requireContext()) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
-        setContentView(R.layout.dialog_content)
+        setContentView(R.layout.clg_graph_dialog)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            window?.setBackgroundDrawable(getDrawable(context, R.drawable.background_of_drawable))
+            window?.setBackgroundDrawable(getDrawable(context, R.drawable.clggraph_background))
         }
 
         val viewPager: ViewPager = findViewById(R.id.dialogViewPager)
-        val btnPrevious: CardView = findViewById(R.id.dialogBtnPrevious)
+        val btnPrevious: CardView = findViewById(R.id.clgReport4)
         val btnNext: CardView = findViewById(R.id.dialogBtnNext)
         val closeButton: TextView = findViewById(R.id.closeButton)
 

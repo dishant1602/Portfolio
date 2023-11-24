@@ -2,7 +2,6 @@ package com.example.portfolio
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
-import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -41,7 +40,17 @@ class EducationFragment : Fragment() {
         val tenParentCard: CardView = view.findViewById(R.id.tenParentCard)
         val tenParentIcon: ImageView = view.findViewById(R.id.tenParentIcon)
         val clgChildCard: CardView = view.findViewById(R.id.clgChildCard)
+        val twelveChildCard: CardView = view.findViewById(R.id.twelveChildCard)
+        val tenChildCard: CardView = view.findViewById(R.id.tenChildCard)
         val clgGraphImg: CardView = view.findViewById(R.id.clgGraphImg)
+        val twelveGraphImg: CardView = view.findViewById(R.id.twelveGraphImg)
+        val tenGraphImg: CardView = view.findViewById(R.id.tenGraphImg)
+        val clgReportImg: CardView = view.findViewById(R.id.clgReportImg)
+        val twelveReportImg: CardView = view.findViewById(R.id.twelveReportImg)
+        val tenReportImg: CardView = view.findViewById(R.id.tenReportImg)
+        var clgParentClicked = false
+        var twelveParentClicked=false
+        var tenParentClicked=false
 
         clgParentCard.visibility = View.INVISIBLE
         twelveParentCard.visibility = View.INVISIBLE
@@ -85,8 +94,54 @@ class EducationFragment : Fragment() {
 
 
         clgParentIcon.setOnClickListener{ _->
+            clgParentClicked = true
             val clgParentCardAnimator = ObjectAnimator.ofFloat(clgParentCard,"alpha",1f,0f)
             clgParentCardAnimator.addListener(object: AnimatorListenerAdapter() {
+                override fun onAnimationStart(animation: Animator) {
+                    if(twelveParentClicked){
+                        val twelveChildCardAnimator = ObjectAnimator.ofFloat(twelveChildCard,"alpha",1f,0f)
+                        twelveChildCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                            override fun onAnimationEnd(animation: Animator) {
+                                twelveChildCard.visibility = View.GONE
+                                val twelveParentCardAnimator = ObjectAnimator.ofFloat(twelveParentCard,"alpha",0f,1f)
+                                twelveParentCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                                    override fun onAnimationStart(animation: Animator) {
+                                        twelveParentCard.visibility = View.VISIBLE
+                                    }
+                                })
+                                twelveParentCardAnimator.duration=1000
+                                twelveParentCardAnimator.start()
+                            }
+                        })
+                        twelveChildCardAnimator.duration=1000
+                        twelveChildCardAnimator.start()
+
+                        twelveParentClicked = false
+
+                    }
+
+                    if(tenParentClicked){
+                        val tenChildCardAnimator = ObjectAnimator.ofFloat(tenChildCard,"alpha",1f,0f)
+                        tenChildCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                            override fun onAnimationEnd(animation: Animator) {
+                                tenChildCard.visibility = View.GONE
+                                val tenParentCardAnimator = ObjectAnimator.ofFloat(tenParentCard,"alpha",0f,1f)
+                                tenParentCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                                    override fun onAnimationStart(animation: Animator) {
+                                        tenParentCard.visibility = View.VISIBLE
+                                    }
+                                })
+                                tenParentCardAnimator.duration=1000
+                                tenParentCardAnimator.start()
+                            }
+                        })
+                        tenChildCardAnimator.duration=1000
+                        tenChildCardAnimator.start()
+
+                        tenParentClicked = false
+
+                    }
+                }
                 override fun onAnimationEnd(animation: Animator) {
                     clgParentCard.visibility = View.GONE
                     val clgChildCardAnimator = ObjectAnimator.ofFloat(clgChildCard,"alpha",0f,1f)
@@ -105,10 +160,149 @@ class EducationFragment : Fragment() {
             clgParentCardAnimator.start()
         }
 
-        clgGraphImg.setOnClickListener{ _->
-            val customDialog = CustomDialog(this, images)
-            customDialog.show()
+        twelveParentIcon.setOnClickListener { _->
+            twelveParentClicked = true
+            val twelveParentCardAnimator = ObjectAnimator.ofFloat(twelveParentCard,"alpha",1f,0f)
+            twelveParentCardAnimator.addListener(object: AnimatorListenerAdapter() {
+                override fun onAnimationStart(animation: Animator) {
+                    if(tenParentClicked){
+                        val tenChildCardAnimator = ObjectAnimator.ofFloat(tenChildCard,"alpha",1f,0f)
+                        tenChildCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                            override fun onAnimationEnd(animation: Animator) {
+                                tenChildCard.visibility = View.GONE
+                                val tenParentCardAnimator = ObjectAnimator.ofFloat(tenParentCard,"alpha",0f,1f)
+                                tenParentCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                                    override fun onAnimationStart(animation: Animator) {
+                                        tenParentCard.visibility = View.VISIBLE
+                                    }
+                                })
+                                tenParentCardAnimator.duration=1000
+                                tenParentCardAnimator.start()
+                            }
+                        })
+                        tenChildCardAnimator.duration=1000
+                        tenChildCardAnimator.start()
 
+                        tenParentClicked = false
+
+                    }
+
+                    if(clgParentClicked){
+                        val clgChildCardAnimator = ObjectAnimator.ofFloat(clgChildCard,"alpha",1f,0f)
+                        clgChildCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                            override fun onAnimationEnd(animation: Animator) {
+                                clgChildCard.visibility = View.GONE
+                                val clgParentCardAnimator = ObjectAnimator.ofFloat(clgParentCard,"alpha",0f,1f)
+                                clgParentCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                                    override fun onAnimationStart(animation: Animator) {
+                                        clgParentCard.visibility = View.VISIBLE
+                                    }
+                                })
+                                clgParentCardAnimator.duration=1000
+                                clgParentCardAnimator.start()
+                            }
+                        })
+                        clgChildCardAnimator.duration=1000
+                        clgChildCardAnimator.start()
+
+                        clgParentClicked = false
+
+                    }
+                }
+                override fun onAnimationEnd(animation: Animator) {
+                    twelveParentCard.visibility = View.GONE
+                    val twelveChildCardAnimator = ObjectAnimator.ofFloat(twelveChildCard,"alpha",0f,1f)
+                    twelveChildCardAnimator.addListener(object: AnimatorListenerAdapter()
+                    {
+                        override fun onAnimationStart(animation: Animator) {
+                            twelveChildCard.visibility = View.VISIBLE
+                        }
+                    })
+                    twelveChildCardAnimator.duration=1000
+                    twelveChildCardAnimator.start()
+
+                }
+            })
+            twelveParentCardAnimator.duration = 1000
+            twelveParentCardAnimator.start()
+        }
+
+        tenParentIcon.setOnClickListener{ _->
+            tenParentClicked = true
+            val tenParentCardAnimator = ObjectAnimator.ofFloat(tenParentCard,"alpha",1f,0f)
+            tenParentCardAnimator.addListener(object: AnimatorListenerAdapter() {
+                override fun onAnimationStart(animation: Animator) {
+                    if(twelveParentClicked){
+                        val twelveChildCardAnimator = ObjectAnimator.ofFloat(twelveChildCard,"alpha",1f,0f)
+                        twelveChildCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                            override fun onAnimationEnd(animation: Animator) {
+                                twelveChildCard.visibility = View.GONE
+                                val twelveParentCardAnimator = ObjectAnimator.ofFloat(twelveParentCard,"alpha",0f,1f)
+                                twelveParentCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                                    override fun onAnimationStart(animation: Animator) {
+                                        twelveParentCard.visibility = View.VISIBLE
+                                    }
+                                })
+                                twelveParentCardAnimator.duration=1000
+                                twelveParentCardAnimator.start()
+                            }
+                        })
+                        twelveChildCardAnimator.duration=1000
+                        twelveChildCardAnimator.start()
+
+                        twelveParentClicked = false
+
+                    }
+
+                    if(clgParentClicked){
+                        val clgChildCardAnimator = ObjectAnimator.ofFloat(clgChildCard,"alpha",1f,0f)
+                        clgChildCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                            override fun onAnimationEnd(animation: Animator) {
+                                clgChildCard.visibility = View.GONE
+                                val clgParentCardAnimator = ObjectAnimator.ofFloat(clgParentCard,"alpha",0f,1f)
+                                clgParentCardAnimator.addListener(object: AnimatorListenerAdapter(){
+                                    override fun onAnimationStart(animation: Animator) {
+                                        clgParentCard.visibility = View.VISIBLE
+                                    }
+                                })
+                                clgParentCardAnimator.duration=1000
+                                clgParentCardAnimator.start()
+                            }
+                        })
+                        clgChildCardAnimator.duration=1000
+                        clgChildCardAnimator.start()
+
+                        clgParentClicked = false
+
+                    }
+                }
+                override fun onAnimationEnd(animation: Animator) {
+                    tenParentCard.visibility = View.GONE
+                    val tenChildCardAnimator = ObjectAnimator.ofFloat(tenChildCard,"alpha",0f,1f)
+                    tenChildCardAnimator.addListener(object: AnimatorListenerAdapter()
+                    {
+                        override fun onAnimationStart(animation: Animator) {
+                            tenChildCard.visibility = View.VISIBLE
+                        }
+                    })
+                    tenChildCardAnimator.duration=1000
+                    tenChildCardAnimator.start()
+
+                }
+            })
+            tenParentCardAnimator.duration = 1000
+            tenParentCardAnimator.start()
+        }
+
+        clgGraphImg.setOnClickListener{ _->
+            val clgGraphDialog = ClgGraphDialog(this, images)
+            clgGraphDialog.show()
+
+        }
+
+        clgReportImg.setOnClickListener{ _->
+            val clgReportDialog = ClgReportDialog(this)
+            clgReportDialog.show()
         }
 
         return view
