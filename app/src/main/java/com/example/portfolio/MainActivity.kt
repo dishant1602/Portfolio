@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
                 var intent: Intent = Intent(this@MainActivity, MainPage::class.java)
                 startActivity(intent)
                 finish()
-            },100
+            },10000
         )
     }
 }

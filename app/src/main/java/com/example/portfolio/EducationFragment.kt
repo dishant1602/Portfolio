@@ -305,6 +305,16 @@ class EducationFragment : Fragment() {
             clgReportDialog.show()
         }
 
+        twelveGraphImg.setOnClickListener{ _->
+            val twelveGraphDialog = twelveGraphDialog(this)
+            twelveGraphDialog.show()
+        }
+
+        twelveReportImg.setOnClickListener { _->
+            val twelveReportDialog = twelveReportDialog(this)
+            twelveReportDialog.show()
+        }
+
         return view
     }
 
