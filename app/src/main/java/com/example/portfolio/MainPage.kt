@@ -30,32 +30,35 @@ class MainPage : AppCompatActivity() {
             ) {
                 val fm : FragmentManager = supportFragmentManager
                 val ft: FragmentTransaction = fm.beginTransaction()
-                val fragmentCurrent: Fragment? = fm.findFragmentById(R.id.container)
-                if(fragmentCurrent!=null){
-                    ft.remove(fragmentCurrent)
-                }
 
 
                 when(newTab.id)
                 {
                     R.id.home -> {
-                        ft.add(R.id.container, HomeFragment())
+                        val fragmentCurrent: Fragment? = fm.findFragmentById(R.id.container)
+                        if(fragmentCurrent!=null){
+                            ft.replace(R.id.container,HomeFragment())
+                        }
+                        else{
+                            ft.add(R.id.container, HomeFragment())
+                        }
+                        ft.replace(R.id.container, HomeFragment())
                     }
 
                     R.id.education -> {
-                        ft.add(R.id.container, EducationFragment())
+                        ft.replace(R.id.container, EducationFragment())
                     }
 
                     R.id.internships -> {
-                        ft.add(R.id.container, InternshipsFragment())
+                        ft.replace(R.id.container, InternshipsFragment())
                     }
 
                     R.id.skills -> {
-                        ft.add(R.id.container, SkillsFragment())
+                        ft.replace(R.id.container, SkillsFragment())
                     }
 
                     R.id.projects -> {
-                        ft.add(R.id.container, ProjectsFragment())
+                        ft.replace(R.id.container, ProjectsFragment())
                     }
                 }
 

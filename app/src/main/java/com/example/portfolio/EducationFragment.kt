@@ -93,7 +93,7 @@ class EducationFragment : Fragment() {
 //        sequence.start()
 
 
-        clgParentIcon.setOnClickListener{ _->
+        clgParentCard.setOnClickListener{ _->
             clgParentClicked = true
             val clgParentCardAnimator = ObjectAnimator.ofFloat(clgParentCard,"alpha",1f,0f)
             clgParentCardAnimator.addListener(object: AnimatorListenerAdapter() {
@@ -160,7 +160,7 @@ class EducationFragment : Fragment() {
             clgParentCardAnimator.start()
         }
 
-        twelveParentIcon.setOnClickListener { _->
+        twelveParentCard.setOnClickListener { _->
             twelveParentClicked = true
             val twelveParentCardAnimator = ObjectAnimator.ofFloat(twelveParentCard,"alpha",1f,0f)
             twelveParentCardAnimator.addListener(object: AnimatorListenerAdapter() {
@@ -227,7 +227,7 @@ class EducationFragment : Fragment() {
             twelveParentCardAnimator.start()
         }
 
-        tenParentIcon.setOnClickListener{ _->
+        tenParentCard.setOnClickListener{ _->
             tenParentClicked = true
             val tenParentCardAnimator = ObjectAnimator.ofFloat(tenParentCard,"alpha",1f,0f)
             tenParentCardAnimator.addListener(object: AnimatorListenerAdapter() {
