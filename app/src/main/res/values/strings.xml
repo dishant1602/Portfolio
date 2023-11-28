@@ -22,4 +22,5 @@
     <string name="email_id">dishantsakhida@gmail.com</string>
     <string name="ping_me">PING ME</string>
     <string name="linkedin_id">linkedin.com/dishant-sakhida</string>
+    <string name="samyak_role">\u2660 Responsible for solving various bugs and implementing new features in the backend via .NET Core. \n \u2660 Created various PRs for issue resolutions.\n \u2660 Worked on creating front-end support for the APIs via Android Studio using JAVA.</string>
 </resources>

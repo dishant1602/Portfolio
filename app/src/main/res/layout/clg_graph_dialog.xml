@@ -84,7 +84,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_margin="15dp"
-                        android:src="@drawable/chevron_right"
+                        android:src="@drawable/chevronright"
                         app:tint="@color/white" />
 
                 </androidx.cardview.widget.CardView>
