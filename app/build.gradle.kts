@@ -46,4 +46,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation ("com.airbnb.android:lottie:6.1.0")
     implementation("nl.joery.animatedbottombar:library:1.1.0")
+    implementation("com.github.barteksc:android-pdf-viewer:2.8.2")
 }

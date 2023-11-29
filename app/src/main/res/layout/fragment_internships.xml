@@ -100,7 +100,7 @@
 
                                         <TextView
                                             android:id="@+id/samyakRole"
-                                            android:layout_width="match_parent"
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_weight="0.5"
                                             android:fontFamily="@font/nunito"
@@ -152,7 +152,6 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/textView19"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/nunito_bold"
@@ -238,7 +237,6 @@
                                     android:textColor="@color/black" />
 
                                 <TextView
-                                    android:id="@+id/textView22"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/nunito_bold"
@@ -246,7 +244,6 @@
                                     android:textColor="@color/black" />
 
                                 <TextView
-                                    android:id="@+id/textView23"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="20dp"
@@ -260,14 +257,12 @@
                                     android:orientation="horizontal">
 
                                     <ImageView
-                                        android:id="@+id/imageView6"
                                         android:layout_width="50dp"
                                         android:layout_height="50dp"
                                         android:layout_weight="1"
                                         android:src="@drawable/dotnetcoreicon" />
 
                                     <ImageView
-                                        android:id="@+id/imageView8"
                                         android:layout_width="50dp"
                                         android:layout_height="50dp"
                                         android:layout_weight="1"
@@ -275,7 +270,6 @@
                                         android:src="@drawable/figmaicon" />
 
                                     <ImageView
-                                        android:id="@+id/imageView10"
                                         android:layout_width="50dp"
                                         android:layout_height="50dp"
                                         android:layout_weight="1"
@@ -283,7 +277,6 @@
                                         android:src="@drawable/androidicon" />
 
                                     <ImageView
-                                        android:id="@+id/imageView11"
                                         android:layout_width="50dp"
                                         android:layout_height="50dp"
                                         android:layout_weight="1"
@@ -324,6 +317,7 @@
                                 </LinearLayout>
 
                                 <androidx.cardview.widget.CardView
+                                    android:id="@+id/samyakCerti"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
@@ -331,7 +325,6 @@
                                     app:cardCornerRadius="10dp">
 
                                     <TextView
-                                        android:id="@+id/textView24"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="10dp"
@@ -346,9 +339,9 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/twelveParentCard"
+                        android:id="@+id/einfoParentCard"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="90dp"
                         android:layout_marginStart="5dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="5dp"
@@ -378,200 +371,233 @@
                                         android:layout_width="50dp"
                                         android:layout_height="50dp"
                                         android:layout_weight="0.5"
-                                        android:src="@drawable/twelve_small" />
+                                        android:src="@drawable/einfochipslogo" />
 
-                                    <TextView
-                                        style="@style/TEXT"
+                                    <LinearLayout
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="match_parent"
                                         android:layout_weight="0.5"
-                                        android:fontFamily="@font/inter_semibold"
-                                        android:text="Higher Secondary"
-                                        android:textSize="16sp" />
-                                </LinearLayout>
+                                        android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="15dp"
-                                    android:layout_marginTop="10dp"
-                                    android:src="@drawable/progressbarsmall_clg" />
+                                        <TextView
+                                            android:id="@+id/einfoName"
+                                            style="@style/TEXT"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="0.5"
+                                            android:fontFamily="@font/inter_semibold"
+                                            android:text="Project Intern"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/einfoRole"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.5"
+                                            android:fontFamily="@font/nunito"
+                                            android:text="eInfochips - An Arrow Company"
+                                            android:textColor="@color/black" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
                             <ImageView
-                                android:id="@+id/twelveParentIcon"
+                                android:id="@+id/einfoParentIcon"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:layout_weight="1"
                                 android:contentDescription="@string/imgDescription"
-                                android:src="@drawable/chevronright" />
+                                android:src="@drawable/chevron_downblack" />
 
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/twelveChildCard"
+                        android:id="@+id/einfoChildCard"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:visibility="gone"
-                        app:cardBackgroundColor="#00FFFFFF"
-                        app:cardElevation="0dp">
+                        android:visibility="visible"
+                        app:cardBackgroundColor="#D9d2FF"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="130dp"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginBottom="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="20dp"
                             android:orientation="horizontal">
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="20dp"
-                                android:layout_weight="1"
-                                app:cardCornerRadius="5dp"
-                                app:cardElevation="5dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:text="Roles and Responsibilities"
+                                    android:textColor="@color/black" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="\u2660" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/nunito"
+                                            android:text="Developed NGSpice files to execute code for Operational Amplifiers"
+                                            android:textColor="@color/black" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="\u2660" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/nunito"
+                                            android:text="Presented entire concept of Single Electron Transistor to industry mentor"
+                                            android:textColor="@color/black" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="\u2660" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/nunito"
+                                            android:text="Worked on various modifications and developments to the project based on requirements."
+                                            android:textColor="@color/black" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito"
+                                    android:text="DURATION"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:text="Jun 2022 - Jul 2022"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:fontFamily="@font/nunito"
+                                    android:text="TECHNOLOGIES"
+                                    android:textColor="@color/black" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="130dp"
-                                    android:orientation="vertical">
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/ngspiceicon" />
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/multisimicon" />
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/slidesicon" />
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/einfoCerti"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    app:cardBackgroundColor="#8c7ce2"
+                                    app:cardCornerRadius="10dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:layout_gravity="right"
-                                        android:layout_marginTop="10dp"
-                                        android:layout_marginEnd="30dp"
+                                        android:layout_margin="10dp"
                                         android:fontFamily="@font/nunito_bold"
-                                        android:text="HBK School"
-                                        android:textAllCaps="true"
-                                        android:textColor="@color/black" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginEnd="30dp"
-                                        android:gravity="right|center_horizontal"
-                                        android:orientation="horizontal">
-
-                                        <LinearLayout
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="match_parent"
-                                            android:orientation="vertical">
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:text="Stream: " />
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:text="Year: " />
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:text="Percentage: " />
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="match_parent"
-                                            android:gravity="right"
-                                            android:orientation="vertical">
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:text="Science" />
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:text="2019" />
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:text="78.33" />
-                                        </LinearLayout>
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-
-                            </androidx.cardview.widget.CardView>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:foregroundGravity="center_vertical"
-                                android:gravity="center_vertical"
-                                android:orientation="vertical">
-
-                                <androidx.cardview.widget.CardView
-                                    android:id="@+id/twelveGraphImg"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginEnd="5dp"
-                                    android:layout_marginBottom="25dp"
-                                    app:cardCornerRadius="5dp"
-                                    app:cardElevation="5dp">
-
-                                    <ImageView
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="center_horizontal|center_vertical"
-                                        android:scaleType="centerInside"
-                                        android:src="@drawable/graphicon" />
+                                        android:text="View Certificate"
+                                        android:textColor="@color/white" />
                                 </androidx.cardview.widget.CardView>
 
-                                <androidx.cardview.widget.CardView
-                                    android:id="@+id/twelveReportImg"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginBottom="5dp"
-                                    app:cardCornerRadius="5dp"
-                                    app:cardElevation="5dp">
-
-                                    <ImageView
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="center_horizontal|center_vertical"
-                                        android:src="@drawable/marksheeticon" />
-                                </androidx.cardview.widget.CardView>
                             </LinearLayout>
                         </LinearLayout>
-
-                        <ImageView
-                            android:id="@+id/imageView7"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/twelve_imgbig" />
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/tenParentCard"
+                        android:id="@+id/botxParentCard"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
+                        android:layout_height="90dp"
                         android:layout_marginStart="5dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="5dp"
-                        android:layout_marginBottom="20dp"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="5dp">
 
@@ -598,180 +624,249 @@
                                         android:layout_width="50dp"
                                         android:layout_height="50dp"
                                         android:layout_weight="0.5"
-                                        android:src="@drawable/ten_small" />
+                                        android:layout_marginEnd="5dp"
+                                        android:src="@drawable/botxlogo" />
 
-                                    <TextView
-                                        style="@style/TEXT"
+                                    <LinearLayout
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center_vertical"
+                                        android:layout_height="match_parent"
                                         android:layout_weight="0.5"
-                                        android:fontFamily="@font/inter_semibold"
-                                        android:text="Secondary"
-                                        android:textSize="16sp" />
-                                </LinearLayout>
+                                        android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="15dp"
-                                    android:layout_marginTop="10dp"
-                                    android:src="@drawable/progressbarsmall_ten" />
+                                        <TextView
+                                            android:id="@+id/botxName"
+                                            style="@style/TEXT"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="0.5"
+                                            android:fontFamily="@font/inter_semibold"
+                                            android:text="Jr. Android Developer"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/botxRole"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.5"
+                                            android:fontFamily="@font/nunito"
+                                            android:text="BOTX Automations Pvt. Ltd."
+                                            android:textColor="@color/black" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
                             <ImageView
-                                android:id="@+id/tenParentIcon"
+                                android:id="@+id/botxParentIcon"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:layout_weight="1"
                                 android:contentDescription="@string/imgDescription"
-                                android:src="@drawable/chevronright" />
+                                android:src="@drawable/chevron_downblack" />
 
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/tenChildCard"
+                        android:id="@+id/botxChildCard"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:visibility="gone"
-                        app:cardBackgroundColor="#00FFFFFF"
-                        app:cardElevation="0dp">
+                        android:visibility="visible"
+                        app:cardBackgroundColor="#D9d2FF"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="130dp"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginBottom="10dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="20dp"
                             android:orientation="horizontal">
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="20dp"
-                                android:layout_weight="1"
-                                app:cardCornerRadius="5dp"
-                                app:cardElevation="5dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:text="Roles and Responsibilities"
+                                    android:textColor="@color/black" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="\u2660" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/nunito"
+                                            android:text="Created custom mobile applications using native technologies."
+                                            android:textColor="@color/black" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="\u2660" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/nunito"
+                                            android:text="Worked as Project Manager for a specific project and led the entire team."
+                                            android:textColor="@color/black" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="\u2660" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/nunito"
+                                            android:text="Integrated third party APIs to facilitate seamless data transfer over the cloud"
+                                            android:textColor="@color/black" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="0.5"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito"
+                                    android:text="DURATION"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:text="May 2021 - Nov 2021"
+                                    android:textColor="@color/black" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:fontFamily="@font/nunito"
+                                    android:text="TECHNOLOGIES"
+                                    android:textColor="@color/black" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="130dp"
-                                    android:orientation="vertical">
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/androidicon" />
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/figmaicon" />
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/javaicon" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/firebaseicon" />
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/githubicon" />
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_weight="1"
+                                        android:scaleType="centerInside"/>
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/botxCerti"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    app:cardBackgroundColor="#8c7ce2"
+                                    app:cardCornerRadius="10dp">
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:layout_gravity="right"
-                                        android:layout_marginTop="10dp"
-                                        android:layout_marginEnd="30dp"
+                                        android:layout_margin="10dp"
                                         android:fontFamily="@font/nunito_bold"
-                                        android:text="Nirman School"
-                                        android:textAllCaps="true"
-                                        android:textColor="@color/black" />
-
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_marginEnd="30dp"
-                                        android:gravity="right|center_horizontal"
-                                        android:orientation="horizontal">
-
-                                        <LinearLayout
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center_vertical"
-                                            android:orientation="vertical">
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginBottom="15dp"
-                                                android:layout_weight="1"
-                                                android:text="Year: " />
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:text="Percentage: " />
-                                        </LinearLayout>
-
-                                        <LinearLayout
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center_vertical"
-                                            android:gravity="right"
-                                            android:orientation="vertical">
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginBottom="15dp"
-                                                android:layout_weight="1"
-                                                android:text="2017" />
-
-                                            <TextView
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_weight="1"
-                                                android:text="82.6" />
-                                        </LinearLayout>
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-
-                            </androidx.cardview.widget.CardView>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:foregroundGravity="center_vertical"
-                                android:gravity="center_vertical"
-                                android:orientation="vertical">
-
-                                <androidx.cardview.widget.CardView
-                                    android:id="@+id/tenGraphImg"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginEnd="5dp"
-                                    android:layout_marginBottom="25dp"
-                                    app:cardCornerRadius="5dp"
-                                    app:cardElevation="5dp">
-
-                                    <ImageView
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="center_horizontal|center_vertical"
-                                        android:scaleType="centerInside"
-                                        android:src="@drawable/graphicon" />
+                                        android:text="View Certificate"
+                                        android:textColor="@color/white" />
                                 </androidx.cardview.widget.CardView>
 
-                                <androidx.cardview.widget.CardView
-                                    android:id="@+id/tenReportImg"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:layout_marginBottom="5dp"
-                                    app:cardCornerRadius="5dp"
-                                    app:cardElevation="5dp">
-
-                                    <ImageView
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="center_horizontal|center_vertical"
-                                        android:src="@drawable/marksheeticon" />
-                                </androidx.cardview.widget.CardView>
                             </LinearLayout>
                         </LinearLayout>
-
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/ten_imgbig" />
 
                     </androidx.cardview.widget.CardView>
 
